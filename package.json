@@ -1,6 +1,6 @@
 {
   "name": "@clarketm/generator-node-cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Node command line application generator.",
   "homepage": "https://github.com/clarketm/generator-node-cli.git",
   "publishConfig": {
@@ -13,7 +13,17 @@
   },
   "files": ["generators"],
   "main": "generators/index.js",
-  "keywords": ["yeoman-generator node cli cl terminal command-line ", "yeoman-generator"],
+  "keywords": [
+    "yeoman-generator",
+    "command-line-tool",
+    "cli",
+    "command-line",
+    "command line",
+    "cl",
+    "terminal",
+    "node",
+    "nodejs"
+  ],
   "devDependencies": {
     "yeoman-test": "^1.7.0",
     "yeoman-assert": "^3.1.0",
