@@ -1,6 +1,6 @@
 # generator-node-cli [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 
-> Generator Node command line application generator.
+> Node command line application generator.
 
 ## Installation
 
