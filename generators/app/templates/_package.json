@@ -1,0 +1,63 @@
+{
+  "name": "@clarketm/<%= name %>",
+  "version": "0.0.0",
+  "description": "<%= description %>",
+  "engines": {
+    "node": ">=8.11.2"
+  },
+  "main": "./lib/<%= binname %>.js",
+  "bin": {
+    "<%= binname %>": "./bin/<%= binname %>.js"
+  },
+  "directories": {
+    "bin": "./bin",
+    "lib": "./lib"
+  },
+  "files": ["bin", "lib", "README.md", "LICENSE.md"],
+  "scripts": {
+    "prettier": "prettier --write '**/*.{js,json,css,md}'",
+    "lint": "eslint --fix ./bin ./lib",
+    "prep": "yarn lint && yarn prettier && yarn test",
+    "test": "jest",
+    "test:watch": "yarn test --watch"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md}": ["prettier --write", "git add"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clarketm/<%= name %>.git"
+  },
+  "keywords": ["<%= binname %>", "cli", "command-line", "command line", "cl", "terminal", "node"],
+  "author": "Travis Clarke <travis.m.clarke@gmail.com> (https://www.travismclarke.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clarketm/<%= name %>/issues"
+  },
+  "homepage": "https://github.com/clarketm/<%= name %>#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "clipboardy": "^1.2.3",
+    "commander": "^2.15.1",
+    "minimist": "^1.2.0",
+    "prettyjson": "^1.2.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/shelljs": "^0.8.0",
+    "eslint": "^4.19.1",
+    "husky": "^1.0.0-rc.7",
+    "jest": "^23.0.0",
+    "lint-staged": "^7.1.2",
+    "prettier": "^1.12.1",
+    "shelljs": "^0.8.2"
+  }
+}

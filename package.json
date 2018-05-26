@@ -1,7 +1,7 @@
 {
-  "name": "generator-node-cli",
-  "version": "0.0.0",
-  "description": "Generator Node command line application generator.",
+  "name": "@clarketm/generator-node-cli",
+  "version": "0.0.1",
+  "description": "Node command line application generator.",
   "homepage": "https://github.com/clarketm/generator-node-cli.git",
   "author": {
     "name": "Travis Clarke",
@@ -38,31 +38,18 @@
   },
   "scripts": {
     "prepublishOnly": "nsp check",
-    "pretest": "eslint .",
+    "pretest": "eslint --fix .",
     "precommit": "lint-staged",
+    "prettier": "prettier --write './**/*.{js,jsoncss,md}'",
     "test": "jest"
   },
   "lint-staged": {
     "*.js": ["eslint --fix", "git add"],
     "*.json": ["prettier --write", "git add"]
   },
-  "eslintConfig": {
-    "extends": ["xo", "prettier"],
-    "env": {
-      "jest": true,
-      "node": true
-    },
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true,
-          "printWidth": 90
-        }
-      ]
-    },
-    "plugins": ["prettier"]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clarketm/generator-node-cli.git"
   },
-  "repository": "ssh://root@synology/volume1/repos/home",
   "license": "MIT"
 }
