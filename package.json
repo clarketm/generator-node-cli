@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Node command line application generator.",
   "homepage": "https://github.com/clarketm/generator-node-cli.git",
+  "publishConfig": {
+    "access": "public"
+  },
   "author": {
     "name": "Travis Clarke",
     "email": "travis.m.clarke@gmail.com",
