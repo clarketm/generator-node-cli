@@ -33,7 +33,7 @@
     "type": "git",
     "url": "git+https://github.com/clarketm/<%= name %>.git"
   },
-  "keywords": ["<%= binname %>", "cli", "command-line", "command line", "cl", "terminal", "node"],
+  "keywords": ["<%= binname %>", "command-line-tool", "cli", "command-line", "command line", "cl", "terminal", "node", "nodejs"],
   "author": "Travis Clarke <travis.m.clarke@gmail.com> (https://www.travismclarke.com/)",
   "license": "MIT",
   "bugs": {
