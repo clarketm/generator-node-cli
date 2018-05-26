@@ -50,9 +50,10 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "prepublishOnly": "nsp check",
-    "pretest": "eslint --fix .",
+    "prepublishOnly": "nsp check && yarn test",
+    "pretest": "yarn lint && yarn prettier",
     "precommit": "lint-staged",
+    "lint": "eslint --fix .",
     "prettier": "prettier --write './**/*.{js,jsoncss,md}'",
     "test": "jest"
   },
