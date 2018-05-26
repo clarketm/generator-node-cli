@@ -77,7 +77,7 @@ module.exports = class extends Generator {
           "bin.js",
           "jest.config.js",
           "lib.js",
-          "test.js"
+          "t.js"
         ];
 
         this.fs.copy(src, dest);
@@ -114,7 +114,7 @@ module.exports = class extends Generator {
         );
 
         this.fs.move(
-          this.destinationPath(`${this.dir}`, "test.js"),
+          this.destinationPath(`${this.dir}`, "t.js"),
           this.destinationPath(`${this.dir}`, `test/${this.binname}.test.js`)
         );
       }
