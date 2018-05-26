@@ -8,13 +8,13 @@ First, install [Yeoman](http://yeoman.io) and generator-node-cli using [npm](htt
 
 ```bash
 npm install -g yo
-npm install -g generator-node-cli
+npm install -g @clarketm/generator-node-cli
 ```
 
 Then generate your new project:
 
 ```bash
-yo node-cli
+yo @clarketm/node-cli
 ```
 
 ## Getting To Know Yeoman
