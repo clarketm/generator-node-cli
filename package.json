@@ -1,6 +1,6 @@
 {
   "name": "@clarketm/generator-node-cli",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Node command line application generator.",
   "homepage": "https://github.com/clarketm/generator-node-cli.git",
   "publishConfig": {
