@@ -28,7 +28,6 @@
     "@types/jest": "^22.2.3",
     "codecov": "^3.0.2",
     "eslint": "^4.19.1",
-    "husky": "^0.14.3",
     "jest": "^22.0.6",
     "lint-staged": "^6.1.1",
     "nsp": "^2.8.0",
@@ -41,6 +40,7 @@
   },
   "dependencies": {
     "chalk": "^2.1.0",
+    "husky": "^1.0.0-rc.8",
     "yeoman-generator": "^2.0.1",
     "yosay": "^2.0.1"
   },
@@ -48,13 +48,16 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "prepublishOnly": "nsp check && yarn test",
-    "pretest": "yarn lint && yarn prettier",
-    "precommit": "lint-staged",
+    "prepublishOnly": "nsp check && yarn lint && yarn prettier && yarn test",
     "lint": "eslint --fix .",
     "prettier": "prettier --write './**/*.{js,json,css,md}'",
     "test:cov": "jest --coverage",
     "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.js": [["eslint --fix", "git add"], ["prettier --write", "git add"]]
