@@ -28,8 +28,8 @@ yo @clarketm/node-cli
 
 MIT © [Travis Clarke](https://www.travismclarke.com/)
 
-[npm-image]: https://img.shields.io/npm/v/generator-node-cli.svg
-[npm-url]: https://npmjs.org/package/generator-node-cli
+[npm-image]: https://img.shields.io/npm/v/@clarketm/generator-node-cli.svg
+[npm-url]: https://npmjs.org/package/@clarketm/generator-node-cli
 [circleci-image]: https://circleci.com/gh/clarketm/generator-node-cli.svg?style=shield
 [circleci-url]: https://circleci.com/gh/clarketm/generator-node-cli
 [daviddm-image]: https://david-dm.org/clarketm/generator-node-cli.svg?theme=shields.io
