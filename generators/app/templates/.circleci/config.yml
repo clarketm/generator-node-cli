@@ -5,8 +5,6 @@ jobs:
     docker:
       - image: circleci/node:10.1
 
-    working_directory: ~/<%= name %>
-
     environment:
       - NODE_ENV: development
 
@@ -25,3 +23,4 @@ jobs:
           key: dependencies-{{ checksum "yarn.lock" }}
 
       - run: yarn test
+      - run: yarn test:cov:upload

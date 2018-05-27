@@ -19,6 +19,8 @@
     "lint": "eslint --fix ./bin ./lib",
     "prep": "yarn lint && yarn prettier && yarn test",
     "test": "jest",
+    "test:cov": "jest --coverage",
+    "test:cov:upload": "yarn test:cov && codecov",
     "test:watch": "yarn test --watch"
   },
   "husky": {

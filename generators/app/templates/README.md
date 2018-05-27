@@ -2,6 +2,7 @@
 
 [![NPM release](https://img.shields.io/npm/v/@clarketm/<%= name %>.svg)](https://www.npmjs.com/package/@clarketm/<%= name %>)
 [![Build Status](https://circleci.com/gh/clarketm/<%= name %>.svg?style=shield)](https://circleci.com/gh/clarketm/<%= name %>)
+[![Code Coverage](hhttps://img.shields.io/codecov/c/github/clarketm/<%= name %>.svg)](https://codecov.io/gh/clarketm/<%= name %>)
 [![Downloads](https://img.shields.io/npm/dt/@clarketm/<%= name %>.svg)](https://www.npmjs.com/package/@clarketm/<%= name %>)
 [![License](https://img.shields.io/npm/l/@clarketm/<%= name %>.svg)](LICENSE.md)
 
