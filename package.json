@@ -54,12 +54,14 @@
     "pretest": "yarn lint && yarn prettier",
     "precommit": "lint-staged",
     "lint": "eslint --fix .",
-    "prettier": "prettier --write './**/*.{js,jsoncss,md}'",
+    "prettier": "prettier --write './**/*.{js,css,md}'",
     "test": "jest"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"],
-    "*.json": ["prettier --write", "git add"]
+    "*.js": [
+      ["eslint --fix", "git add"],
+      ["prettier --write", "git add"]
+    ]
   },
   "repository": {
     "type": "git",
