@@ -65,15 +65,10 @@
   },
   "lint-staged": {
     "*.js": [
-      [
         "eslint --fix",
-        "git add"
-      ],
-      [
         "prettier --write",
         "git add"
       ]
-    ]
   },
   "repository": {
     "type": "git",
