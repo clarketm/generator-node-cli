@@ -1,1 +1,1 @@
-describe("<%= binname %>", () => {});
+describe("<%= binName %>", () => {});

@@ -8,9 +8,28 @@ const path = require("path");
 module.exports = class extends Generator {
   constructor(args, opts) {
     super(args, opts);
-    this.argument("name", { type: String, required: false });
-    this.argument("binname", { type: String, required: false });
-    this.argument("description", { type: String, required: false });
+
+    this.name = {
+      type: String,
+      required: false,
+      desc: "Command line app name"
+    };
+
+    this.binName = {
+      type: String,
+      alias: "b",
+      desc: "Command line binary name"
+    };
+
+    this.description = {
+      type: String,
+      alias: "d",
+      desc: "Command line app description"
+    };
+
+    this.argument("name", this.name);
+    this.option("binName", this.binName);
+    this.option("description", this.description);
   }
 
   initializing() {}
@@ -18,37 +37,44 @@ module.exports = class extends Generator {
   prompting() {
     this.log(yosay("Welcome to the " + chalk.blue("node-cli") + " generator!"));
 
-    const prompts = [];
+    let prompts = [];
 
     if (!this.options.name) {
-      prompts.push({
+      prompts.unshift({
         type: "input",
         name: "name",
-        message: "Command line app name"
-      });
-    }
-
-    if (!this.options.binname) {
-      prompts.push({
-        type: "input",
-        name: "binname",
-        message: "Command line binary name"
-      });
-    }
-
-    if (!this.options.description) {
-      prompts.push({
-        type: "input",
-        name: "description",
-        message: "Command line app description"
+        message: this.name.desc
       });
     }
 
     return this.prompt(prompts).then(answer => {
       this.name = this.options.name || answer.name;
-      this.binname = this.options.binname || answer.binname;
-      this.description = this.options.description || answer.description;
       this.dir = this.name;
+
+      prompts = [];
+
+      if (!this.options.description) {
+        prompts.unshift({
+          type: "input",
+          name: "description",
+          message: this.description.desc,
+          default: "Command line tool"
+        });
+      }
+
+      if (!this.options.binName) {
+        prompts.unshift({
+          type: "input",
+          name: "binName",
+          message: this.binName.desc,
+          default: this.name
+        });
+      }
+
+      return this.prompt(prompts).then(answer => {
+        this.binName = this.options.binName || answer.binName;
+        this.description = this.options.description || answer.description;
+      });
     });
   }
 
@@ -85,7 +111,7 @@ module.exports = class extends Generator {
 
         const opts = {
           name: this.name,
-          binname: this.binname,
+          binName: this.binName,
           description: this.description
         };
 
@@ -105,17 +131,17 @@ module.exports = class extends Generator {
 
         this.fs.move(
           this.destinationPath(`${this.dir}`, "bin.js"),
-          this.destinationPath(`${this.dir}`, `bin/${this.binname}.js`)
+          this.destinationPath(`${this.dir}`, `bin/${this.binName}.js`)
         );
 
         this.fs.move(
           this.destinationPath(`${this.dir}`, "lib.js"),
-          this.destinationPath(`${this.dir}`, `lib/${this.binname}.js`)
+          this.destinationPath(`${this.dir}`, `lib/${this.binName}.js`)
         );
 
         this.fs.move(
           this.destinationPath(`${this.dir}`, "t.js"),
-          this.destinationPath(`${this.dir}`, `test/${this.binname}.test.js`)
+          this.destinationPath(`${this.dir}`, `test/${this.binName}.test.js`)
         );
       }
     };

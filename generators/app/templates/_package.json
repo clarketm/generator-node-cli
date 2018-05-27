@@ -5,9 +5,9 @@
   "engines": {
     "node": ">=8.11.2"
   },
-  "main": "./lib/<%= binname %>.js",
+  "main": "./lib/<%= binName %>.js",
   "bin": {
-    "<%= binname %>": "./bin/<%= binname %>.js"
+    "<%= binName %>": "./bin/<%= binName %>.js"
   },
   "directories": {
     "bin": "./bin",
@@ -33,7 +33,7 @@
     "type": "git",
     "url": "git+https://github.com/clarketm/<%= name %>.git"
   },
-  "keywords": ["<%= binname %>", "command-line-tool", "cli", "command-line", "command line", "cl", "terminal", "node", "nodejs"],
+  "keywords": ["<%= binName %>", "command-line-tool", "cli", "command-line", "command line", "cl", "terminal", "node", "nodejs"],
   "author": "Travis Clarke <travis.m.clarke@gmail.com> (https://www.travismclarke.com/)",
   "license": "MIT",
   "bugs": {

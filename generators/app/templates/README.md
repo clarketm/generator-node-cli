@@ -1,8 +1,9 @@
 # <%= name %>
 
-![GitHub release](https://img.shields.io/github/release/clarketm/<%= name %>.svg)
-![Build Status](https://circleci.com/gh/clarketm/<%= name %>.svg?style=shield&circle-token=51853e44a4aff2fef83b0b89407ed15288bd641c)
-![License](https://img.shields.io/npm/l/@clarketm/<%= name %>.svg)
+[![NPM release](https://img.shields.io/npm/v/@clarketm/<%= name %>.svg)](https://www.npmjs.com/package/@clarketm/<%= name %>)
+[![Build Status](https://circleci.com/gh/clarketm/<%= name %>.svg?style=shield)](https://circleci.com/gh/clarketm/<%= name %>)
+[![Downloads](https://img.shields.io/npm/dt/@clarketm/<%= name %>.svg)](https://www.npmjs.com/package/@clarketm/<%= name %>)
+[![License](https://img.shields.io/npm/l/@clarketm/<%= name %>.svg)](LICENSE.md)
 
 <%= description %>
 
