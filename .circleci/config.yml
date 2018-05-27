@@ -25,5 +25,4 @@ jobs:
           key: dependencies-{{ checksum "yarn.lock" }}
 
       - run: yarn test
-      - run: yarn test:cov
-      - run: codecov
+      - run: yarn test:cov:upload
