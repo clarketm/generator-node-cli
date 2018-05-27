@@ -4,16 +4,16 @@ const assert = require("yeoman-assert");
 const helpers = require("yeoman-test");
 
 describe("generator-node-cli:app", () => {
-  let name, binname, description;
+  let name, binName, description;
 
   beforeAll(() => {
     name = "jwt-utils";
-    binname = "jwt";
+    binName = "jwt";
     description = "Command line utilities for working with JSON Web Tokens (JWT)";
 
     return helpers
       .run(path.join(__dirname, "../generators/app"))
-      .withPrompts({ name, binname, description });
+      .withPrompts({ name, binName, description });
   });
 
   it("should creates files", () => {
@@ -29,9 +29,9 @@ describe("generator-node-cli:app", () => {
       "README.md",
       ".gitignore",
       "package.json",
-      `bin/${binname}.js`,
-      `lib/${binname}.js`,
-      `test/${binname}.test.js`,
+      `bin/${binName}.js`,
+      `lib/${binName}.js`,
+      `test/${binName}.test.js`,
       "jest.config.js"
     ]);
   });
@@ -44,8 +44,8 @@ describe("generator-node-cli:app", () => {
     assert.fileContent([
       ["package.json", `"name": "@clarketm/${name}",`],
       ["package.json", `"description": "${description}",`],
-      ["package.json", `"main": "./lib/${binname}.js",`],
-      ["package.json", `"${binname}": "./bin/${binname}.js"`],
+      ["package.json", `"main": "./lib/${binName}.js",`],
+      ["package.json", `"${binName}": "./bin/${binName}.js"`],
       ["package.json", `"homepage": "https://github.com/clarketm/${name}#readme",`]
     ]);
   });
