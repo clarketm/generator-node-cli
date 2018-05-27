@@ -1,6 +1,6 @@
 {
   "name": "@clarketm/generator-node-cli",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Node command line application generator.",
   "homepage": "https://github.com/clarketm/generator-node-cli.git",
   "publishConfig": {
@@ -11,7 +11,9 @@
     "email": "travis.m.clarke@gmail.com",
     "url": "https://www.travismclarke.com/"
   },
-  "files": ["generators"],
+  "files": [
+    "generators"
+  ],
   "main": "generators/index.js",
   "keywords": [
     "yeoman-generator",
@@ -48,9 +50,10 @@
     "testEnvironment": "node"
   },
   "scripts": {
-    "prepublishOnly": "nsp check && yarn lint && yarn prettier && yarn test",
+    "prepublishOnly": "nsp check && yarn lint && yarn prettier && yarn test && yarn diff",
     "lint": "eslint --fix .",
     "prettier": "prettier --write './**/*.{js,json,css,md}'",
+    "diff": "sh ./diff.sh",
     "test:cov": "jest --coverage",
     "test:cov:upload": "yarn test:cov && codecov",
     "test": "jest"
@@ -61,7 +64,16 @@
     }
   },
   "lint-staged": {
-    "*.js": [["eslint --fix", "git add"], ["prettier --write", "git add"]]
+    "*.js": [
+      [
+        "eslint --fix",
+        "git add"
+      ],
+      [
+        "prettier --write",
+        "git add"
+      ]
+    ]
   },
   "repository": {
     "type": "git",

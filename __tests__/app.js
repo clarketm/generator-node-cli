@@ -29,7 +29,7 @@ describe("generator-node-cli:app", () => {
       "README.md",
       ".gitignore",
       "package.json",
-      `bin/${binName}.js`,
+      `bin/${binName}.j`,
       `lib/${binName}.js`,
       `test/${binName}.test.js`,
       "jest.config.js"
