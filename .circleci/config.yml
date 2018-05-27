@@ -5,8 +5,6 @@ jobs:
     docker:
       - image: circleci/node:10.1
 
-    working_directory: ~/generator-node-cli-commander
-
     environment:
       - NODE_ENV: development
 
